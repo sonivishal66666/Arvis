@@ -1,98 +1,156 @@
-# **Serverless Online Ticketing System**
+<h1 align="center">🎟️ Serverless Online Ticketing System</h1>
 
-## **Overview**
+<p align="center">
+  <img src="https://img.shields.io/badge/Serverless-GCP_Cloud_Run-blue?style=for-the-badge&logo=googlecloud" />
+  <img src="https://img.shields.io/badge/PHP-Fullstack-purple?style=for-the-badge&logo=php" />
+  <img src="https://img.shields.io/badge/Payments-Cashfree-green?style=for-the-badge" />
+</p>
 
-This project is a serverless online ticketing system that provides a seamless booking experience for various modes of transport and events. The system integrates a secure payment gateway using Cashfree and is fully implemented in PHP. It employs Google Cloud Run to ensure a serverless and scalable environment, making it cost-effective and efficient. The application is backed by a MySQL database and includes a Dockerfile for easy runtime deployment.
-            
-## **Features**
+<p align="center">
+  <b>A scalable, serverless ticket booking platform with integrated payments</b>
+</p>
 
-**Serverless Architecture** : Deployed using Google Cloud Run, eliminating the need for manual server management.
+<hr/>
 
-**Integrated Payment Gateway**: Secure and reliable payment processing via Cashfree.
+<h2>📌 Overview</h2>
 
-**Multi-Booking Support**: Allows booking for buses, trains, planes, and events.
+<p>
+This project is a <b>serverless online ticketing system</b> designed to provide a seamless
+booking experience for multiple transport modes and events.
+</p>
 
-**Responsive Design**: Ensures a user-friendly experience across devices.
+<p>
+The application is built entirely using <b>PHP</b>, deployed in a <b>serverless environment
+using Google Cloud Run</b>, and integrates a secure <b>Cashfree payment gateway</b>.
+</p>
 
-**Admin Panel**: Facilitates management of bookings, payments, and user data.
+<p>
+A <b>MySQL database</b> handles persistent data storage, while <b>Docker</b> ensures consistent
+runtime environments and simplified deployments.
+</p>
 
-**Dockerized Deployment**: Simplifies deployment and runtime environment setup.
+<hr/>
 
-## **Tech Stack**
+<h2>✨ Features</h2>
 
-**Frontend & Backend**: PHP
+<ul>
+  <li><b>Serverless Architecture</b> using Google Cloud Run</li>
+  <li><b>Secure Payment Integration</b> with Cashfree</li>
+  <li><b>Multi-Booking Support</b> for buses, trains, flights, and events</li>
+  <li><b>Admin Panel</b> for managing users, bookings, and payments</li>
+  <li><b>Responsive UI</b> across desktop and mobile devices</li>
+  <li><b>Dockerized Deployment</b> for portability and consistency</li>
+</ul>
 
-**Database:** MySQL
+<hr/>
 
-**Payment Gateway:** Cashfree
+<h2>🛠️ Tech Stack</h2>
 
-**Cloud Platform:** Google Cloud Run
+<table>
+  <tr><td><b>Frontend & Backend</b></td><td>PHP</td></tr>
+  <tr><td><b>Database</b></td><td>MySQL</td></tr>
+  <tr><td><b>Payment Gateway</b></td><td>Cashfree</td></tr>
+  <tr><td><b>Cloud Platform</b></td><td>Google Cloud Run</td></tr>
+  <tr><td><b>Containerization</b></td><td>Docker</td></tr>
+</table>
 
-**Containerization:** Docker
+<hr/>
 
-# Installation & Setup
+<h2>📁 Project Structure</h2>
 
-# Prerequisites
+<pre>
+serverless-ticketing-system/
+├── app/
+├── config/
+├── public/
+├── admin/
+├── Dockerfile
+├── database.sql
+└── README.md
+</pre>
 
-**Install Docker.**
+<hr/>
 
-Set up a MySQL database and configure the credentials.
+<h2>⚙️ Installation & Setup</h2>
 
-Ensure you have access to Google Cloud Platform (GCP) and enable Cloud Run.
+<h3>Prerequisites</h3>
+<ul>
+  <li>Docker installed</li>
+  <li>MySQL database configured</li>
+  <li>Google Cloud account with Cloud Run enabled</li>
+</ul>
 
-# Steps
+<h3>Local Setup</h3>
 
-Clone the repository from GitHub:
+<pre>
+git clone &lt;repository-url&gt;
+cd &lt;project-directory&gt;
 
-`git clone <repository-url>` 
+docker build -t ticketing-system .
+docker run -p 8080:8080 ticketing-system
+</pre>
 
-Navigate to the project directory:
+<p>
+The application will be available at:
+</p>
 
-` cd <project-directory>` 
+<pre>
+http://localhost:8080
+</pre>
 
-Build the Docker image:
+<hr/>
 
-` docker build -t ticketing-system ` .
+<h2>☁️ Deployment (Google Cloud Run)</h2>
 
-Run the Docker container:
+<ul>
+  <li>Push Docker image to Google Container Registry (GCR)</li>
+  <li>Deploy the image to Google Cloud Run</li>
+  <li>Access the app using the Cloud Run service URL</li>
+</ul>
 
-` docker run -p 8080:8080 ticketing-system` 
+<p>
+Cloud Run automatically handles scaling and infrastructure management.
+</p>
 
-# Deploy to Google Cloud Run:
+<hr/>
 
-**Push the Docker image to Google Container Registry (GCR).**
+<h2>🚀 Usage</h2>
 
-**Deploy the image to Cloud Run following GCP documentation.**
+<ul>
+  <li>Browse available transport and event bookings</li>
+  <li>Complete secure transactions via Cashfree</li>
+  <li>Admins can manage bookings, users, and payments</li>
+</ul>
 
-**Access the application in your browser using the URL provided by Cloud Run.**
+<hr/>
 
-# Usage
+<h2>🤝 Contributions</h2>
 
-Visit the homepage to explore available bookings.
+<p>Contributions are welcome.</p>
 
-Use the integrated payment gateway for secure transactions.
+<pre>
+git fork
+git checkout -b feature-name
+git commit -m "Add new feature"
+git push origin feature-name
+</pre>
 
-Admins can log in to the admin panel for system management.
+<p>
+Submit a pull request with a clear description of the changes.
+</p>
 
-# Contributions
+<hr/>
 
-Contributions are welcome! Please follow these steps:
+<h2>👤 Author</h2>
 
-# Fork the repository.
+<p>
+<b>Vishal Soni</b><br/>
+Cloud & DevOps Engineer<br/>
+Email: <a href="mailto:vishalsoni6350@gmail.com">vishalsoni6350@gmail.com</a>
+</p>
 
-Create a feature branch:
+<hr/>
 
-` git checkout -b feature-name` 
-
-Commit your changes and push to your fork.
-
-Submit a pull request detailing the changes made.
-
-# Contact
-
-For queries or support, please contact:
-**
-Vishal Soni
-
-Email: vishalsoni6350@gmail.com
-**
+<p align="center">
+⭐ If you find this project useful, consider starring the repository.
+</p>
